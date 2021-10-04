@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body,html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container .screen{
+    background: #fff;
+    height: 20px;
+    width: 100%;
+    margin:20px 0px ;
+    box-shadow: 0 3px 8px rgba(255, 255, 255, .7);
+}
+.container .row{
+    display: flex;
+}
+.container .seat{
+    background-color: #444451;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.container .seat.selected{
+    background-color: #f6eb6f;
+}
+.container .seat.reserved{
+    background-color: #F0706A;
+}
+.container .row .seat:nth-of-type(2){
+    margin-right: 40px;
+}
+.container .row .seat:nth-last-of-type(3){
+    margin-right: 40px;
+}
+.container .movie-list{
+    margin-top: 1em;
+}
+.container .movie-list #movie{
+width: 100%;
+text-align: center;
+border-radius: 5px;
+padding: .5em 0em;
+}
+.container .movie-list #movie:focus{
+    outline: 0;
+}
+.container .info{
+    margin-top: 1.5em;
+    background: #44445141;
+}
+.container .info ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+.container .info ul li{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.container .price{
+    margin-top: 1.5em;
+    background: #44445141;
+    padding: 1em 0em;
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.container .price .count{
+    color: #f6eb6f;
+}
+.container .price .amount{
+   color: #F0706A;
+}
+.container .row .seat:not(.reserved):hover{
+    transform: scale(1.1);
+}
